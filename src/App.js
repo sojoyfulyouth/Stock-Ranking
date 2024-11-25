@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
     stockRaise: "3.7%",
   };
   const stockList = [stock1, stock2];
+
+  const stockWordList = ["기업", "주가", "등락율", "클릭량"];
+
   return (
     <div className="App">
       <h1 id="appTitle"> Catch Stock</h1>
@@ -44,15 +48,20 @@ function App() {
             <span>
               {stock.stockName}
               <br />
-              {stock.stockPrice}
-              <br />
-              {stock.stockRaise}
             </span>
           </div>
         ))}
       </div>
+      <div className="stockWordCategoryWrap">
+        {stockWordList.map((stock, index) => (
+          // <div key={ndex}>
+          <p>{stock}</p>
+          // </div>
+        ))}
+      </div>
       <div className="stockRankingWrap">
         {/* 4번째 주식부터 보여줘야함 */}
+        {/* 아니면 맨 상단에 탑3 주식 이름만 노출되게 하고 1순위부터 보여줘도 될 듯 */}
         {stockList.map((stock, index) => (
           <div key={index} className="stock">
             <span className="stockListContent">

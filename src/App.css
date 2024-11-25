@@ -60,3 +60,9 @@ body {
 .stockRankingWrap > *:hover {
   background-color: skyblue;
 }
+
+.stockWordCategoryWrap {
+  /* display: flex;
+  align-items: center; */
+  text-align: center;
+}
