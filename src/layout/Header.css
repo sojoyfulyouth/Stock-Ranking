@@ -1,3 +1,13 @@
+.header {
+  z-index: 999999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 2px solid #196c2d;
+  background-color: white;
+}
+
 #appTitle {
   text-align: left !important;
   padding-left: 5%;
@@ -7,22 +17,24 @@
   font-family: "Montserrat Subrayada", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
-
-#appComment {
-  padding-left: 23%;
-  color: #a86201;
   margin-bottom: 0;
 }
 
+#appComment {
+  text-align: center;
+  /* padding-left: 23%; */
+  color: #a86201;
+  margin: 0;
+}
+
 .top3RankWrap {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   justify-self: center;
-  margin-bottom: 3%;
+  /* margin-bottom: 3%; */
 }
 
 .top3RankWrap > div.topStock {
@@ -33,4 +45,6 @@
   text-align: center;
   border: 2px solid #28a745;
   border-radius: 15px;
+
+  font-weight: 700;
 }
