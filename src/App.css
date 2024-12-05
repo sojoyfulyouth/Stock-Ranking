@@ -1,68 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Nanum+Gothic&display=swap");
+
 body {
-  background-color: whitesmoke;
-  color: navy;
-  text-align: center;
+  color: white;
 }
 
 #appTitle {
   text-align: left !important;
-  padding-left: 20px;
+  padding-left: 5%;
+  color: #196c2d;
+  font-size: 50px;
+
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#appComment {
+  padding-left: 23%;
+  color: #a86201;
+  margin-bottom: 0;
 }
 
 .top3RankWrap {
   width: 70%;
-  background-color: black;
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  justify-self: center;
+  margin-bottom: 3%;
 }
 
-.top3RankWrap > * {
-  border: 2px solid black;
-  background-color: pink;
-  /* height: 10%; */
-  width: 70%;
-  margin: 10px;
+.top3RankWrap > div.topStock {
+  background-color: #a9c985;
+  height: 80px;
+  width: 20%;
+  margin: 20px;
   text-align: center;
+  border: 2px solid #28a745;
+  border-radius: 15px;
+}
+
+.stockWordCategoryWrap {
+  margin-top: 3%;
+  color: #a87e01;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-right: 5%;
+  align-items: baseline;
+}
+
+.stockWordItem {
+  width: 20%;
+  white-space: pre-wrap;
+}
+
+.stockKeyword {
+  margin: 0 3%;
+  text-align: right;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.stockKeyword:hover {
+  cursor: pointer;
+}
+
+.stockWordMean {
+  color: white;
+  background-color: #5f767a;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px;
+  width: fit-content;
 }
 
 .stockRankingWrap {
   margin: 10px;
   display: block;
   width: 70%;
-  background-color: aquamarine;
   display: block;
   justify-self: center;
 }
 
 .stock {
-  background-color: mistyrose;
-  border: 2px solid black;
+  background-color: #acc196;
+  border: 2px solid #a9c985;
+  border-radius: 15px;
+
   height: 50px;
+
   text-align: center;
-  display: inline-block;
-  margin: 10px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+
   margin: 30px;
   padding: 10px;
 }
 
-.stock > * {
-  margin: 30px;
+.stockListContent > p {
+  margin: 40px;
+  font-size: 18px;
 }
 
 .stockListContent {
   display: flex;
   align-items: center;
+  justify-self: center;
 }
 
 .top3RankWrap > *:hover,
-.stockRankingWrap > *:hover {
-  background-color: skyblue;
-}
-
-.stockWordCategoryWrap {
-  /* display: flex;
-  align-items: center; */
-  text-align: center;
+.stockRankingWrap > *:not(.stockWordCategoryWrap):hover {
+  background-color: rgb(251, 246, 237);
+  color: #1b7430;
 }
