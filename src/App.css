@@ -5,27 +5,63 @@ body {
   color: white;
 }
 
-.stockWordCategoryWrap {
-  margin-top: 300px;
-  color: #a87e01;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  margin-right: 5%;
-  align-items: baseline;
+.stockRankingWrap {
+  margin: 10px;
+  display: block;
+  width: 70%;
+  display: block;
+  justify-self: center;
 }
 
-.stockWordItem {
-  width: 20%;
+.stockWordCategoryWrap {
+  margin-top: 320px;
+  margin-left: 145px;
+  /* color: #a87e01;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline; */
+
+  color: #a87e01;
+  display: grid; /* Grid 레이아웃 */
+  grid-template-columns: 1fr 3fr 2fr 3fr 2fr; /* 열 비율 동일하게 설정 */
+  text-align: center;
+  align-items: center; /* 세로 정렬 */
+}
+
+.pageDescriptionWrap {
+  position: relative;
+  left: -100px;
   white-space: pre-wrap;
 }
 
+.pageDescription {
+  display: none;
+  color: #a87e01;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px;
+  width: max-content;
+
+  position: absolute;
+  top: -60px;
+  right: -90px;
+  z-index: 10; /* 다른 요소 위에 표시 */
+}
+
+.stockWordItem {
+  white-space: pre-wrap;
+  position: relative;
+  width: 200px;
+}
+
 .stockKeyword {
-  margin: 0 3%;
-  text-align: right;
+  margin: 0;
+  text-align: center;
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: 700;
   font-style: normal;
+  width: max-content;
 }
 
 .stockKeyword:hover {
@@ -33,20 +69,18 @@ body {
 }
 
 .stockWordMean {
+  display: none;
   color: white;
   background-color: #5f767a;
   font-size: 14px;
   border-radius: 10px;
   padding: 10px;
-  width: fit-content;
-}
+  width: max-content;
 
-.stockRankingWrap {
-  margin: 10px;
-  display: block;
-  width: 70%;
-  display: block;
-  justify-self: center;
+  position: absolute;
+  top: -60px;
+  /* right: -90px; */
+  z-index: 10; /* 다른 요소 위에 표시 */
 }
 
 .stock {
@@ -65,17 +99,17 @@ body {
 }
 
 .stockListContent > p {
-  margin: 40px;
+  margin: 0 40px;
   font-size: 18px;
 }
 
 .stockListContent {
-  display: flex;
-  align-items: center;
-  justify-self: center;
+  display: grid; /* Grid 사용 */
+  grid-template-columns: 1fr 3fr 2fr 3fr 2fr; /* 열 비율 */
+  align-items: center; /* 세로 정렬 */
+  text-align: center; /* 텍스트 가운데 정렬 */
 }
 
-.top3RankWrap > *:hover,
 .stockRankingWrap > *:not(.stockWordCategoryWrap):hover {
   background-color: rgb(251, 246, 237);
   color: #1b7430;

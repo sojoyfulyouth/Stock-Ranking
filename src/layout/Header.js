@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Header.css";
 
+import { FaRegQuestionCircle } from "react-icons/fa";
+
 const Header = () => {
   const [stockInfo, setStockInfo] = useState([]);
+  const [clickedQues, setClickedQues] = useState(null);
+
   const url =
     "https://port-0-kkk-m1jz7al6f2aafb4b.sel4.cloudtype.app/volume-rank";
   const getStockInfo = () => {
