@@ -52,7 +52,7 @@ function App() {
               style={{ display: clickedQues === null ? "none" : "block" }}
             >
               {
-                "어제보다 주식이 얼마나 오르고 내렸는지에 따라 주식의 순위를 매겼어요. \n주식 용어를 누르면 용어에 대한 설명이 나와요."
+                "어제보다 주식이 얼마나 오르고 내렸는지에 따라\n주식의 순위를 매겼어요. \n주식 용어를 누르면 용어에 대한 설명이 나와요."
               }
             </div>
             <FaRegQuestionCircle />
@@ -61,7 +61,7 @@ function App() {
             <div key={index} className="stockWordItem">
               <div
                 className="stockWordMean"
-                style={{ display: clickedIndex === index ? "block" : "none" }} // 조건부 스타일링
+                style={{ display: clickedIndex === index ? "block" : "none" }}
               >
                 {describe}
               </div>
@@ -79,7 +79,7 @@ function App() {
         </div>
         {[...stockInfo]
           .filter((stock) => !isNaN(Number(stock.prdyCtrt)))
-          .sort((a, b) => b.prdyCtrt - a.prdyCtrt) // stockRaise 값 기준으로 내림차순 정렬
+          .sort((a, b) => b.prdyCtrt - a.prdyCtrt)
           .map((stock, index) => (
             <div
               key={index}
